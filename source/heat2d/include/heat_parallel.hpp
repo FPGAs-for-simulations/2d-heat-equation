@@ -22,8 +22,7 @@ namespace heat2d {
 //   in_out  – on entry: initial grid; on exit: final grid
 //   metrics – filled with per-step and aggregate statistics
 //             metrics.comm_ns counts ghost-row exchange time
-void solve_parallel(const HeatConfig& cfg,
-                    Grid& in_out,
-                    SolverMetrics& metrics);
+void solve_parallel(const HeatConfig &cfg, Grid &in_out,
+                    SolverMetrics &metrics);
 
 } // namespace heat2d

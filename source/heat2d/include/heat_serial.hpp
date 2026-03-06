@@ -21,8 +21,6 @@ namespace heat2d {
 //   metrics – filled with per-step and aggregate statistics
 //
 // Snapshots are saved according to cfg.snapshot_interval.
-void solve_serial(const HeatConfig& cfg,
-                  Grid& in_out,
-                  SolverMetrics& metrics);
+void solve_serial(const HeatConfig &cfg, Grid &in_out, SolverMetrics &metrics);
 
 } // namespace heat2d

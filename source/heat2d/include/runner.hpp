@@ -12,18 +12,18 @@
 namespace heat2d {
 
 struct RunnerResult {
-    Grid          serial_grid;
-    Grid          parallel_grid;
-    SolverMetrics serial_metrics;
-    SolverMetrics parallel_metrics;
+  Grid serial_grid;
+  Grid parallel_grid;
+  SolverMetrics serial_metrics;
+  SolverMetrics parallel_metrics;
 };
 
 // Run both solvers from a shared initial condition.
 // cfg controls all parameters including output paths.
 // Returns grids and metrics for both solvers.
-RunnerResult run_heat2d(const HeatConfig& cfg);
+RunnerResult run_heat2d(const HeatConfig &cfg);
 
 // Convenience: print a compact summary to stdout
-void print_summary(const RunnerResult& r);
+void print_summary(const RunnerResult &r);
 
 } // namespace heat2d
