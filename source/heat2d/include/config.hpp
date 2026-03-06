@@ -15,7 +15,7 @@ struct HeatConfig {
                             // total grid = (N+2) x (N+2)
 
     // ---- Time -----------------------------------------------
-    int num_steps = 10000;  // number of explicit time steps
+    int num_steps = 100000;  // number of explicit time steps
 
     // ---- Physics --------------------------------------------
     double c = 0.1;         // thermal diffusivity

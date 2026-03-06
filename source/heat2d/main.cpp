@@ -20,7 +20,7 @@ static void usage(const char* prog) {
     std::printf(
         "Usage: %s [options]\n"
         "  -N <int>        Interior grid points per dim  (default: 30)\n"
-        "  -steps <int>    Time steps                    (default: 10000)\n"
+        "  -steps <int>    Time steps                    (default: 100000)\n"
         "  -c <double>     Thermal diffusivity           (default: 0.1)\n"
         "  -threads <int>  Threads for parallel solver   (default: 4)\n"
         "  -snap <int>     Snapshot interval (0=off)     (default: 500)\n"
@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     // Paper's "medium" case: ~565x565 grid (N=563) at 10000 steps ≈ 60s serial (paper Table 1).
     // We use N=500 / 5000 steps as a comfortable ~5-15s range on modern hardware.
     cfg.N                 = 500;
-    cfg.num_steps         = 5000;
+    cfg.num_steps         = 100000;
     cfg.num_threads       = std::max(1u, std::thread::hardware_concurrency());
     cfg.snapshot_interval = 500;
 
