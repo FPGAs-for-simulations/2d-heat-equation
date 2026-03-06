@@ -1,0 +1,40 @@
+[
+  {
+    "directory": "/home/mallya/Desktop/LBP/solver",
+    "arguments": [
+      "/bin/clang++",
+      "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/mallya/vivado/2025.2/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=heat2d_serial_hls",
+      "-c",
+      "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_parallel_hls.cpp"
+    ],
+    "file": "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_parallel_hls.cpp"
+  },
+  {
+    "directory": "/home/mallya/Desktop/LBP/solver",
+    "arguments": [
+      "/bin/clang++",
+      "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/mallya/vivado/2025.2/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=heat2d_serial_hls",
+      "-c",
+      "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_serial_hls.cpp"
+    ],
+    "file": "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_serial_hls.cpp"
+  },
+  {
+    "directory": "/home/mallya/Desktop/LBP/solver",
+    "arguments": [
+      "/bin/clang++",
+      "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/mallya/vivado/2025.2/Vitis/include",
+      "-c",
+      "/home/mallya/Desktop/LBP/slopper/heat2d_hls/tb/tb_heat2d_hls.cpp"
+    ],
+    "file": "/home/mallya/Desktop/LBP/slopper/heat2d_hls/tb/tb_heat2d_hls.cpp"
+  }
+]

@@ -1,0 +1,143 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-7035" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:68:53" msg_body="unexpected pragma parameter 'bundle'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/../include/hls_stencil.hpp:41:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="apply_stencil" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:65:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory port=u_in depth=(30 + 2)*(30 + 2)" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:66:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory port=u_out depth=(30 + 2)*(30 + 2)" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:67:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=num_steps bundle=ctrl" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:68:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="0" ARG_PragmaOptions="ap_ctrl_hs port=return bundle=ctrl" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:81:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_a cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:82:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_b cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:87:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_a cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:88:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_b cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:93:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:101:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=10000 avg=10000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:119:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:126:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:141:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:143:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:153:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_parallel_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-7035" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:57:53" msg_body="unexpected pragma parameter 'bundle'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/../include/hls_stencil.hpp:41:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="apply_stencil" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=heat2d_serial_hls" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:54:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory port=u_in depth=(30 + 2)*(30 + 2)" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:55:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory port=u_out depth=(30 + 2)*(30 + 2)" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=num_steps bundle=ctrl" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:57:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="0" ARG_PragmaOptions="ap_ctrl_hs port=return bundle=ctrl" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:68:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_a cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:69:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u_b cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:75:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:85:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=10000 avg=10000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:100:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:117:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:127:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="heat2d_serial_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:101:29" msg_body="Inlining function 'apply_stencil(double, double, double, double, double)' into 'heat2d_serial_hls(double (*) [32], double (*) [32], int)'">
+        <args Callee="apply_stencil(double, double, double, double, double)" Callee-DebugLoc="File ../slopper/heat2d_hls/src/../include/hls_stencil.hpp Line 40 Column 0" Caller="heat2d_serial_hls(double (*) [32], double (*) [32], int)" Caller-DebugLoc="File ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp Line 50 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="Applying array_partition to 'u_a': Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="2" Factor="4" Mode="Cyclic" UOName="u_a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:63:15" msg_body="Applying array_partition to 'u_b': Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="2" Factor="4" Mode="Cyclic" UOName="u_b"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="array_partition dim=1 type=cyclic factor=3 variable=u_a_0 1 heat2d_serial_hls ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15 ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1u_a_0">
+        <args PragmaFunction="heat2d_serial_hls" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=u_a_0" PragmaSrcLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" PragmaSrcLoc-DebugLoc="File ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp Line 98 Column 1" PragmaType="array_partition" VarLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" VarName="u_a_0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'u_a_0' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="u_a_0" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="array_partition dim=1 type=cyclic factor=3 variable=u_a_1 1 heat2d_serial_hls ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15 ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1u_a_1">
+        <args PragmaFunction="heat2d_serial_hls" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=u_a_1" PragmaSrcLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" PragmaSrcLoc-DebugLoc="File ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp Line 98 Column 1" PragmaType="array_partition" VarLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" VarName="u_a_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'u_a_1' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="u_a_1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="array_partition dim=1 type=cyclic factor=3 variable=u_a_2 1 heat2d_serial_hls ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15 ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1u_a_2">
+        <args PragmaFunction="heat2d_serial_hls" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=u_a_2" PragmaSrcLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" PragmaSrcLoc-DebugLoc="File ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp Line 98 Column 1" PragmaType="array_partition" VarLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" VarName="u_a_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'u_a_2' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="u_a_2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="array_partition dim=1 type=cyclic factor=3 variable=u_a_3 1 heat2d_serial_hls ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15 ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1u_a_3">
+        <args PragmaFunction="heat2d_serial_hls" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=u_a_3" PragmaSrcLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" PragmaSrcLoc-DebugLoc="File ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp Line 98 Column 1" PragmaType="array_partition" VarLoc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" VarName="u_a_3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'u_a_3' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="u_a_3" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="Applying array_partition to 'u_a_0': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="u_a_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="Applying array_partition to 'u_a_1': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="u_a_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="Applying array_partition to 'u_a_2': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="u_a_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15" msg_body="Applying array_partition to 'u_a_3': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="u_a_3"/>
+    </msg>
+</xilinx:hls_fe_msgs>

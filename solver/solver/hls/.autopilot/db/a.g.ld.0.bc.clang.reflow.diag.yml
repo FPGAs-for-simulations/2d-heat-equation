@@ -1,0 +1,335 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 101, Column: 29 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'apply_stencil(double, double, double, double, double)'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/../include/hls_stencil.hpp, 
+                       Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'heat2d_serial_hls(double (*) [32], double (*) [32], int)'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 50, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_heat2d_serial_hls_ir
+Args:            
+  - Callee:          'heat2d_serial_hls(double (*) [32], double (*) [32], int)'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 50, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_heat2d_serial_hls_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_a
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 63, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=u_a_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  heat2d_serial_hls
+  - String:          ' '
+  - VarLoc:          '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15'
+  - String:          ' '
+  - PragmaSrcLoc:    '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 98, Column: 1 }
+  - VarName:         u_a_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 98, Column: 1 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            u_a_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=u_a_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  heat2d_serial_hls
+  - String:          ' '
+  - VarLoc:          '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15'
+  - String:          ' '
+  - PragmaSrcLoc:    '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 98, Column: 1 }
+  - VarName:         u_a_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 98, Column: 1 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            u_a_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=u_a_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  heat2d_serial_hls
+  - String:          ' '
+  - VarLoc:          '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15'
+  - String:          ' '
+  - PragmaSrcLoc:    '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 98, Column: 1 }
+  - VarName:         u_a_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 98, Column: 1 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            u_a_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=u_a_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  heat2d_serial_hls
+  - String:          ' '
+  - VarLoc:          '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:62:15'
+  - String:          ' '
+  - PragmaSrcLoc:    '../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1'
+    DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                       Line: 98, Column: 1 }
+  - VarName:         u_a_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 98, Column: 1 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            u_a_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_a_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_a_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_a_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp, 
+                   Line: 62, Column: 15 }
+Function:        _Z17heat2d_serial_hlsPA32_dS0_i
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u_a_3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vitis HLS Report for 'heat2d_serial_hls_Pipeline_STORE_I_STORE_J'
+================================================================
+* Date:           Fri Mar  6 15:07:54 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        solver
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.986 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |     1034|     1034|  10.340 us|  10.340 us|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- STORE_I_STORE_J  |     1032|     1032|        10|          1|          1|  1024|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.98>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 13 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 14 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%indvar_flatten13 = alloca i32 1"   --->   Operation 15 'alloca' 'indvar_flatten13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %u_out, void @empty_1, i32 0, i32 0, void @empty_2, i32 4294967295, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.48ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten13"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 18 [1/1] (0.48ns)   --->   "%store_ln125 = store i6 0, i6 %i" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 18 'store' 'store_ln125' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 19 [1/1] (0.48ns)   --->   "%store_ln126 = store i6 0, i6 %j" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 19 'store' 'store_ln126' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc113"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten13_load = load i11 %indvar_flatten13" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 21 'load' 'indvar_flatten13_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.94ns)   --->   "%icmp_ln125 = icmp_eq  i11 %indvar_flatten13_load, i11 1024" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 22 'icmp' 'icmp_ln125' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.94ns)   --->   "%add_ln125_1 = add i11 %indvar_flatten13_load, i11 1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 23 'add' 'add_ln125_1' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln125 = br i1 %icmp_ln125, void %for.inc116, void %for.end118.exitStub" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 24 'br' 'br_ln125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%j_load = load i6 %j" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 25 'load' 'j_load' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%i_load = load i6 %i" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 26 'load' 'i_load' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.88ns)   --->   "%add_ln125 = add i6 %i_load, i6 1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 27 'add' 'add_ln125' <Predicate = (!icmp_ln125)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.88ns)   --->   "%icmp_ln126 = icmp_eq  i6 %j_load, i6 32" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 28 'icmp' 'icmp_ln126' <Predicate = (!icmp_ln125)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.44ns)   --->   "%select_ln125 = select i1 %icmp_ln126, i6 0, i6 %j_load" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 29 'select' 'select_ln125' <Predicate = (!icmp_ln125)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.44ns)   --->   "%select_ln125_1 = select i1 %icmp_ln126, i6 %add_ln125, i6 %i_load" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 30 'select' 'select_ln125_1' <Predicate = (!icmp_ln125)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln128 = trunc i6 %select_ln125_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 31 'trunc' 'trunc_ln128' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i5.i5, i5 %trunc_ln128, i5 0" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 32 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln125 = zext i6 %select_ln125_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 33 'zext' 'zext_ln125' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (2.17ns)   --->   "%mul_ln125 = mul i13 %zext_ln125, i13 86" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 34 'mul' 'mul_ln125' <Predicate = (!icmp_ln125)> <Delay = 2.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [10/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 35 'urem' 'urem_ln125' <Predicate = (!icmp_ln125)> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln128 = zext i6 %select_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 36 'zext' 'zext_ln128' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.93ns)   --->   "%add_ln128 = add i10 %tmp_s, i10 %zext_ln128" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 37 'add' 'add_ln128' <Predicate = (!icmp_ln125)> <Delay = 0.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln126 = trunc i6 %select_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 38 'trunc' 'trunc_ln126' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%lshr_ln1 = partselect i3 @_ssdm_op_PartSelect.i3.i6.i32.i32, i6 %select_ln125, i32 2, i32 4" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 39 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_33_cast = partselect i4 @_ssdm_op_PartSelect.i4.i13.i32.i32, i13 %mul_ln125, i32 8, i32 11" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 40 'partselect' 'tmp_33_cast' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.88ns)   --->   "%add_ln126 = add i6 %select_ln125, i6 1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 41 'add' 'add_ln126' <Predicate = (!icmp_ln125)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.48ns)   --->   "%store_ln125 = store i11 %add_ln125_1, i11 %indvar_flatten13" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 42 'store' 'store_ln125' <Predicate = (!icmp_ln125)> <Delay = 0.48>
+ST_1 : Operation 43 [1/1] (0.48ns)   --->   "%store_ln125 = store i6 %select_ln125_1, i6 %i" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 43 'store' 'store_ln125' <Predicate = (!icmp_ln125)> <Delay = 0.48>
+ST_1 : Operation 44 [1/1] (0.48ns)   --->   "%store_ln126 = store i6 %add_ln126, i6 %j" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 44 'store' 'store_ln126' <Predicate = (!icmp_ln125)> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 1.53>
+ST_2 : Operation 45 [9/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 45 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.53>
+ST_3 : Operation 46 [8/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 46 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.53>
+ST_4 : Operation 47 [7/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 47 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.53>
+ST_5 : Operation 48 [6/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 48 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.53>
+ST_6 : Operation 49 [5/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 49 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.53>
+ST_7 : Operation 50 [4/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 50 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.53>
+ST_8 : Operation 51 [3/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 51 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.53>
+ST_9 : Operation 52 [2/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 52 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_3 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %tmp_33_cast, i3 %lshr_ln1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 53 'bitconcatenate' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln128_1 = zext i7 %tmp_3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 54 'zext' 'zext_ln128_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%u_a_addr = getelementptr i64 %u_a, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 55 'getelementptr' 'u_a_addr' <Predicate = (trunc_ln126 == 0)> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "%u_a_1_addr = getelementptr i64 %u_a_1, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 56 'getelementptr' 'u_a_1_addr' <Predicate = (trunc_ln126 == 0)> <Delay = 0.00>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%u_a_2_addr = getelementptr i64 %u_a_2, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 57 'getelementptr' 'u_a_2_addr' <Predicate = (trunc_ln126 == 0)> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "%u_a_3_addr = getelementptr i64 %u_a_3, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 58 'getelementptr' 'u_a_3_addr' <Predicate = (trunc_ln126 == 1)> <Delay = 0.00>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%u_a_4_addr = getelementptr i64 %u_a_4, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 59 'getelementptr' 'u_a_4_addr' <Predicate = (trunc_ln126 == 1)> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%u_a_5_addr = getelementptr i64 %u_a_5, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 60 'getelementptr' 'u_a_5_addr' <Predicate = (trunc_ln126 == 1)> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%u_a_6_addr = getelementptr i64 %u_a_6, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 61 'getelementptr' 'u_a_6_addr' <Predicate = (trunc_ln126 == 2)> <Delay = 0.00>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%u_a_7_addr = getelementptr i64 %u_a_7, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 62 'getelementptr' 'u_a_7_addr' <Predicate = (trunc_ln126 == 2)> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%u_a_8_addr = getelementptr i64 %u_a_8, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 63 'getelementptr' 'u_a_8_addr' <Predicate = (trunc_ln126 == 2)> <Delay = 0.00>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%u_a_9_addr = getelementptr i64 %u_a_9, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 64 'getelementptr' 'u_a_9_addr' <Predicate = (trunc_ln126 == 3)> <Delay = 0.00>
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%u_a_10_addr = getelementptr i64 %u_a_10, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 65 'getelementptr' 'u_a_10_addr' <Predicate = (trunc_ln126 == 3)> <Delay = 0.00>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%u_a_11_addr = getelementptr i64 %u_a_11, i64 0, i64 %zext_ln128_1" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 66 'getelementptr' 'u_a_11_addr' <Predicate = (trunc_ln126 == 3)> <Delay = 0.00>
+ST_9 : Operation 67 [2/2] (1.35ns)   --->   "%u_a_load = load i7 %u_a_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 67 'load' 'u_a_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 68 [2/2] (1.35ns)   --->   "%u_a_1_load = load i7 %u_a_1_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 68 'load' 'u_a_1_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 69 [2/2] (1.35ns)   --->   "%u_a_2_load = load i7 %u_a_2_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 69 'load' 'u_a_2_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 70 [2/2] (1.35ns)   --->   "%u_a_3_load = load i7 %u_a_3_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 70 'load' 'u_a_3_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 71 [2/2] (1.35ns)   --->   "%u_a_4_load = load i7 %u_a_4_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 71 'load' 'u_a_4_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 72 [2/2] (1.35ns)   --->   "%u_a_5_load = load i7 %u_a_5_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 72 'load' 'u_a_5_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 73 [2/2] (1.35ns)   --->   "%u_a_6_load = load i7 %u_a_6_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 73 'load' 'u_a_6_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 74 [2/2] (1.35ns)   --->   "%u_a_7_load = load i7 %u_a_7_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 74 'load' 'u_a_7_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 75 [2/2] (1.35ns)   --->   "%u_a_8_load = load i7 %u_a_8_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 75 'load' 'u_a_8_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 76 [2/2] (1.35ns)   --->   "%u_a_9_load = load i7 %u_a_9_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 76 'load' 'u_a_9_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 77 [2/2] (1.35ns)   --->   "%u_a_10_load = load i7 %u_a_10_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 77 'load' 'u_a_10_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 78 [2/2] (1.35ns)   --->   "%u_a_11_load = load i7 %u_a_11_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 78 'load' 'u_a_11_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_9 : Operation 106 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 106 'ret' 'ret_ln0' <Predicate = (icmp_ln125)> <Delay = 0.48>
+
+State 10 <SV = 9> <Delay = 2.62>
+ST_10 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @STORE_I_STORE_J_str"   --->   Operation 79 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 80 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024"   --->   Operation 80 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 81 [1/10] (1.53ns)   --->   "%urem_ln125 = urem i6 %select_ln125_1, i6 3" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 81 'urem' 'urem_ln125' <Predicate = true> <Delay = 1.53> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 9> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln125 = trunc i2 %urem_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125]   --->   Operation 82 'trunc' 'trunc_ln125' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln128_2 = zext i10 %add_ln128" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 83 'zext' 'zext_ln128_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 84 [1/1] (0.00ns)   --->   "%u_out_addr = getelementptr i64 %u_out, i64 0, i64 %zext_ln128_2" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 84 'getelementptr' 'u_out_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 85 [1/1] (0.00ns)   --->   "%specpipeline_ln127 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_2" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:127]   --->   Operation 85 'specpipeline' 'specpipeline_ln127' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 86 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_load = load i7 %u_a_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 86 'load' 'u_a_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 87 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_1_load = load i7 %u_a_1_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 87 'load' 'u_a_1_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 88 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_2_load = load i7 %u_a_2_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 88 'load' 'u_a_2_load' <Predicate = (trunc_ln126 == 0)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 89 [1/1] (0.48ns)   --->   "%tmp_4 = sparsemux i64 @_ssdm_op_SparseMux.ap_auto.3double.double.i2, i2 0, i64 %u_a_load, i2 1, i64 %u_a_1_load, i2 2, i64 %u_a_2_load, i64 <undef>, i2 %trunc_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 89 'sparsemux' 'tmp_4' <Predicate = (trunc_ln126 == 0)> <Delay = 0.48> <CoreInst = "OneHotSparseMux_HasDef">   --->   Core 152 'OneHotSparseMux_HasDef' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 90 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_3_load = load i7 %u_a_3_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 90 'load' 'u_a_3_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 91 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_4_load = load i7 %u_a_4_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 91 'load' 'u_a_4_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 92 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_5_load = load i7 %u_a_5_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 92 'load' 'u_a_5_load' <Predicate = (trunc_ln126 == 1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 93 [1/1] (0.48ns)   --->   "%tmp_5 = sparsemux i64 @_ssdm_op_SparseMux.ap_auto.3double.double.i2, i2 0, i64 %u_a_3_load, i2 1, i64 %u_a_4_load, i2 2, i64 %u_a_5_load, i64 <undef>, i2 %trunc_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 93 'sparsemux' 'tmp_5' <Predicate = (trunc_ln126 == 1)> <Delay = 0.48> <CoreInst = "OneHotSparseMux_HasDef">   --->   Core 152 'OneHotSparseMux_HasDef' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 94 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_6_load = load i7 %u_a_6_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 94 'load' 'u_a_6_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 95 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_7_load = load i7 %u_a_7_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 95 'load' 'u_a_7_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 96 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_8_load = load i7 %u_a_8_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 96 'load' 'u_a_8_load' <Predicate = (trunc_ln126 == 2)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 97 [1/1] (0.48ns)   --->   "%tmp_6 = sparsemux i64 @_ssdm_op_SparseMux.ap_auto.3double.double.i2, i2 0, i64 %u_a_6_load, i2 1, i64 %u_a_7_load, i2 2, i64 %u_a_8_load, i64 <undef>, i2 %trunc_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 97 'sparsemux' 'tmp_6' <Predicate = (trunc_ln126 == 2)> <Delay = 0.48> <CoreInst = "OneHotSparseMux_HasDef">   --->   Core 152 'OneHotSparseMux_HasDef' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 98 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_9_load = load i7 %u_a_9_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 98 'load' 'u_a_9_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 99 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_10_load = load i7 %u_a_10_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 99 'load' 'u_a_10_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 100 [1/2] ( I:1.35ns O:1.35ns )   --->   "%u_a_11_load = load i7 %u_a_11_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 100 'load' 'u_a_11_load' <Predicate = (trunc_ln126 == 3)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 88> <RAM>
+ST_10 : Operation 101 [1/1] (0.48ns)   --->   "%tmp_7 = sparsemux i64 @_ssdm_op_SparseMux.ap_auto.3double.double.i2, i2 0, i64 %u_a_9_load, i2 1, i64 %u_a_10_load, i2 2, i64 %u_a_11_load, i64 <undef>, i2 %trunc_ln125" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 101 'sparsemux' 'tmp_7' <Predicate = (trunc_ln126 == 3)> <Delay = 0.48> <CoreInst = "OneHotSparseMux_HasDef">   --->   Core 152 'OneHotSparseMux_HasDef' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 102 [1/1] (0.60ns)   --->   "%tmp_8 = sparsemux i64 @_ssdm_op_SparseMux.ap_auto.4double.double.i2, i2 0, i64 %tmp_4, i2 1, i64 %tmp_5, i2 2, i64 %tmp_6, i2 3, i64 %tmp_7, i64 <undef>, i2 %trunc_ln126" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 102 'sparsemux' 'tmp_8' <Predicate = true> <Delay = 0.60> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 103 [1/1] (0.00ns)   --->   "%bitcast_ln128 = bitcast i64 %tmp_8" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 103 'bitcast' 'bitcast_ln128' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 104 [1/1] ( I:0.00ns O:0.00ns )   --->   "%store_ln128 = store i64 %bitcast_ln128, i10 %u_out_addr" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128]   --->   Operation 104 'store' 'store_ln128' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 1024> <RAM>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln126 = br void %for.inc113" [../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:126]   --->   Operation 105 'br' 'br_ln126' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 1.250ns.
+
+ <State 1>: 3.986ns
+The critical path consists of the following:
+	'store' operation ('store_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) of constant 0 6 bit on local variable 'i', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125 [19]  (0.489 ns)
+	'load' operation 6 bit ('i_load', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) on local variable 'i', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125 [29]  (0.000 ns)
+	'add' operation 6 bit ('add_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [30]  (0.887 ns)
+	'select' operation 6 bit ('select_ln125_1', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [35]  (0.440 ns)
+	'mul' operation 13 bit ('mul_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [39]  (2.170 ns)
+
+ <State 2>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 3>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 4>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 5>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 6>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 7>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 8>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 9>: 1.534ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+
+ <State 10>: 2.627ns
+The critical path consists of the following:
+	'urem' operation 2 bit ('urem_ln125', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:125) [40]  (1.534 ns)
+	'sparsemux' operation 64 bit ('tmp_4', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128) [67]  (0.489 ns)
+	'sparsemux' operation 64 bit ('tmp_8', ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:128) [80]  (0.605 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

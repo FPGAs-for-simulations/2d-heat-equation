@@ -1,0 +1,3 @@
+relativeroot=/home/mallya/Desktop/LBP/solver
+original_argv=-c --mode hls --config /home/mallya/Desktop/LBP/solver/hls_config.cfg --work_dir solver 
+

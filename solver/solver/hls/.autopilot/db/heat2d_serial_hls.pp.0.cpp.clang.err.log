@@ -1,0 +1,47 @@
+In file included from ../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:35:
+../slopper/heat2d_hls/src/../include/hls_stencil.hpp:41:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=apply_stencil_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+directive:1:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=name=heat2d_serial_hls_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=heat2d_serial_hls
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:54:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=ap_memory port=u_in depth=(30 + 2)*(30 + 2)_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_memory port=u_in depth=(30 + 2)*(30 + 2)
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:55:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=ap_memory port=u_out depth=(30 + 2)*(30 + 2)_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_memory port=u_out depth=(30 + 2)*(30 + 2)
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:56:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=s_axilite port=num_steps bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=num_steps bundle=ctrl
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:57:53: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return bundle=ctrl
+                                                    ^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:57:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return bundle=ctrl
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:68:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=variable=u_a cyclic factor=4 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_a cyclic factor=4 dim=2
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:69:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=variable=u_b cyclic factor=4 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_b cyclic factor=4 dim=2
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:75:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:85:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=min=1 max=10000 avg=10000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=10000 avg=10000
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:98:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:100:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_FLATTEN off
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:117:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:127:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_serial_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+15 warnings generated.

@@ -1,0 +1,3 @@
+/home/mallya/Desktop/LBP/solver/../slopper/heat2d_hls/src/heat2d_serial_hls.cpp:57:53: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return bundle=ctrl
+                                                    ^

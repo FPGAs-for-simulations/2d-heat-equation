@@ -1,0 +1,14 @@
+<pragmas>
+<pragma file="../slopper/heat2d_hls/src/../include/hls_stencil.hpp" line="41" pragmaType="inline" parentfunction="apply_stencil" off="0" region="0" recursive="0"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="127" pragmaType="pipeline" parentfunction="heat2d_serial_hls" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="85" pragmaType="loop_tripcount" parentfunction="heat2d_serial_hls" min="1" max="10000" avg="10000"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="98" pragmaType="pipeline" parentfunction="heat2d_serial_hls" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="100" pragmaType="loop_flatten" parentfunction="heat2d_serial_hls" off="1"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="117" pragmaType="pipeline" parentfunction="heat2d_serial_hls" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="75" pragmaType="pipeline" parentfunction="heat2d_serial_hls" off="0" ii="1" rewind="0" style=""/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="54" pragmaType="interface" parentfunction="heat2d_serial_hls" mode="ap_memory" port="u_in" storage_type="-1" impl="-1" latency="-1" name="" depth="1024"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="55" pragmaType="interface" parentfunction="heat2d_serial_hls" mode="ap_memory" port="u_out" storage_type="-1" impl="-1" latency="-1" name="" depth="1024"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="56" pragmaType="interface" parentfunction="heat2d_serial_hls" mode="s_axilite" port="num_steps" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="68" pragmaType="array_partition" parentfunction="heat2d_serial_hls" dim="2" factor="4" mode="cyclic" dynamic="0" variable="u_a"/>
+<pragma file="../slopper/heat2d_hls/src/heat2d_serial_hls.cpp" line="69" pragmaType="array_partition" parentfunction="heat2d_serial_hls" dim="2" factor="4" mode="cyclic" dynamic="0" variable="u_b"/>
+</pragmas>

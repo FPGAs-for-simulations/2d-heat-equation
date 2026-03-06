@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/mallya/Desktop/LBP/solver/solver/hls/.autopilot/db/heat2d_serial_hls.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../slopper/heat2d_hls/src/heat2d_serial_hls.cpp</string>
+      <key>line</key>
+      <integer>57</integer>
+      <key>column</key>
+      <integer>53</integer>
+      <key>message</key>
+      <string>unexpected pragma parameter &apos;bundle&apos;</string>
+      <key>ID</key>
+      <integer>7035</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

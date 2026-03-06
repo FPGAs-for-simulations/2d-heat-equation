@@ -1,0 +1,251 @@
+<ENTRY>
+{
+ "thisFile": "/home/mallya/Desktop/LBP/solver/solver/solver.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar  6 15:07:44 2026",
+ "timestampMillis": "1772789864030",
+ "buildStep": {
+  "cmdId": "5effe571-8d19-482b-a6f4-92e2da5fb60e",
+  "name": "v++",
+  "logFile": "/home/mallya/Desktop/LBP/solver/solver/logs/solver.steps.log",
+  "commandLine": "/home/mallya/vivado/2025.2/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/mallya/Desktop/LBP/solver/hls_config.cfg --work_dir solver ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/mallya/Desktop/LBP/solver/hls_config.cfg",
+   "--work_dir",
+   "solver"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/mallya/Desktop/LBP/solver/hls_config.cfg",
+    "content": "part=xczu5eg-sfvc784-1-i\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=10\nclock_uncertainty=1.25\nsyn.file=../slopper/heat2d_hls/src/heat2d_serial_hls.cpp\nsyn.file=../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp\nsyn.file=../slopper/heat2d_hls/include/heat2d_parallel_hls.hpp\nsyn.file=../slopper/heat2d_hls/include/heat2d_serial_hls.hpp\nsyn.file=../slopper/heat2d_hls/include/hls_config.hpp\nsyn.file=../slopper/heat2d_hls/include/hls_stencil.hpp\nsyn.file=../slopper/heat2d_hls/include/hls_types.hpp\ntb.file=../slopper/heat2d_hls/tb/tb_heat2d_hls.cpp\ntb.file=../slopper/heat2d_hls/tb/tb_utils.hpp\ntb.file=../slopper/heat2d_hls/include/heat2d_parallel_hls.hpp\ntb.file=../slopper/heat2d_hls/include/heat2d_serial_hls.hpp\ntb.file=../slopper/heat2d_hls/include/hls_config.hpp\ntb.file=../slopper/heat2d_hls/include/hls_stencil.hpp\ntb.file=../slopper/heat2d_hls/include/hls_types.hpp\nsyn.top=heat2d_serial_hls"
+   }
+  ],
+  "cwd": "/home/mallya/Desktop/LBP/solver"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar  6 15:07:44 2026",
+ "timestampMillis": "1772789864030",
+ "status": {
+  "cmdId": "5effe571-8d19-482b-a6f4-92e2da5fb60e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865953",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "heat2d_serial_hls",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_serial_hls.cpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/src/heat2d_parallel_hls.cpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/include/heat2d_parallel_hls.hpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/include/heat2d_serial_hls.hpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/include/hls_config.hpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/include/hls_stencil.hpp",
+     "/home/mallya/Desktop/LBP/slopper/heat2d_hls/include/hls_types.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865954",
+ "buildStep": {
+  "cmdId": "5831e93b-610b-4b26-9edb-6b32b4ebdf4c",
+  "name": "",
+  "logFile": "/home/mallya/Desktop/LBP/solver/solver/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/mallya/Desktop/LBP/solver"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865954",
+ "status": {
+  "cmdId": "5831e93b-610b-4b26-9edb-6b32b4ebdf4c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865954",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865954",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:45 2026",
+ "timestampMillis": "1772789865954",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874881",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874881",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874882",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874882",
+ "status": {
+  "cmdId": "5831e93b-610b-4b26-9edb-6b32b4ebdf4c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874929",
+ "status": {
+  "cmdId": "5effe571-8d19-482b-a6f4-92e2da5fb60e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874937",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/reports/v++_compile_solver_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar  6 15:07:54 2026",
+ "timestampMillis": "1772789874938",
+ "report": {
+  "path": "/home/mallya/Desktop/LBP/solver/solver/reports/.db/v++_compile_solver_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

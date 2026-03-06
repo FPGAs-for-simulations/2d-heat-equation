@@ -1,0 +1,53 @@
+In file included from ../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:52:
+../slopper/heat2d_hls/src/../include/hls_stencil.hpp:41:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=apply_stencil_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:65:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=ap_memory port=u_in depth=(30 + 2)*(30 + 2)_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_memory port=u_in depth=(30 + 2)*(30 + 2)
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:66:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=ap_memory port=u_out depth=(30 + 2)*(30 + 2)_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_memory port=u_out depth=(30 + 2)*(30 + 2)
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:67:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=s_axilite port=num_steps bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=num_steps bundle=ctrl
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:68:53: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return bundle=ctrl
+                                                    ^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:68:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return bundle=ctrl
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:81:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=variable=u_a cyclic factor=4 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_a cyclic factor=4 dim=1
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:82:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=variable=u_b cyclic factor=4 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_b cyclic factor=4 dim=1
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:87:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=variable=u_a cyclic factor=4 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_a cyclic factor=4 dim=2
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:88:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=variable=u_b cyclic factor=4 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=u_b cyclic factor=4 dim=2
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:93:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:101:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=min=1 max=10000 avg=10000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=10000 avg=10000
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:119:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=4
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:126:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:141:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=4
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:143:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+../slopper/heat2d_hls/src/heat2d_parallel_hls.cpp:153:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=heat2d_parallel_hls_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+17 warnings generated.

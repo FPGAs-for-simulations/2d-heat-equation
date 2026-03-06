@@ -1,0 +1,22 @@
+{
+  "0": {
+    "basicblocks": 67,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 11,
+    "file": "heat2d_serial_hls.cpp",
+    "fileloc": 46,
+    "instructions": 562,
+    "loads": {
+      "L": 76,
+      "T": 1
+    },
+    "memory_accesses": 121,
+    "name": "heat2d_serial_hls",
+    "stores": {
+      "L": 32,
+      "T": 1
+    },
+    "total_instructions": 562
+  }
+}
