@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver",
+    "arguments": [
+      "/bin/clang++",
+      "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/mallya/vivado/2025.2/Vitis/common/technology/autopilot",
+      "-c",
+      "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver/solver.cpp"
+    ],
+    "file": "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver/solver.cpp"
+  },
+  {
+    "directory": "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver",
+    "arguments": [
+      "/bin/clang++",
+      "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/mallya/vivado/2025.2/Vitis/include",
+      "-c",
+      "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver/solver_tb.cpp"
+    ],
+    "file": "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver/solver_tb.cpp"
+  }
+]

@@ -1,0 +1,7 @@
+{
+    "clangd.fallbackFlags": [
+        "-I/home/mallya/vivado/2025.2/Vitis/include",
+        "-I/home/mallya/vivado/2025.2/Vitis/include/etc",
+        "-I/home/mallya/vivado/2025.2/Vitis/lnx64/tools/auto_cc/include"
+    ]
+}
