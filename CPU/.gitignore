@@ -1,0 +1,13 @@
+# Build artifacts
+solver
+
+# Solution artifacts
+heat_history.csv
+analysis.png
+evolution.gif
+performance_plot.png
+performance.csv
+
+# Python artifacts
+__pycache__/
+*.pyc
