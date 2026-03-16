@@ -6,6 +6,7 @@
       "--gcc-toolchain=/home/mallya/vivado/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/home/mallya/vivado/2025.2/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=heat_solver",
       "-c",
       "/home/mallya/Desktop/Heat_eqn_solver/HLS/solver/solver.cpp"
     ],

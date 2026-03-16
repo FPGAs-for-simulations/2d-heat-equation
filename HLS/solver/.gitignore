@@ -1,21 +1,26 @@
-# Ignore build output directory
-/build
-/export
+# Vitis HLS build artifacts
+/solver/
+/.cache/
+/compile_commands.json
+/.Xil/
+
+# Logs and temporary files
+*.log
+*.jou
+*.str
+*.backup.log
+
+# IDE specific
+../_ide/
+/config.h.bak
 
 # Ignore object files and dependent files
-.o
-.d
+*.o
+*.d
 
-#Ignore logs folder and log files
-/logs
-.log
+# Ignore lock files
+*.lock
 
-#Ignore lock files
-.lock
-
-.bin
-.pdi
-.vitisWorkspace.json
-
-_ide/logs
-_ide/.wsdata
+*.bin
+*.pdi
+*.vitisWorkspace.json
